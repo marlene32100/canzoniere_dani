@@ -1,0 +1,62 @@
+{
+  "Main": {
+    "uid": {
+      "type": "UID",
+      "config": {
+        "label": "uid",
+        "placeholder": "ID"
+      }
+    },
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1,heading2,heading3,heading4,heading5,heading6",
+        "label": "title",
+        "placeholder": "Titolo"
+      }
+    },
+    "album": {
+      "type": "Select",
+      "config": {
+        "options": ["Spirito soffia in me"],
+        "default_value": "Spirito soffia in me",
+        "label": "album",
+        "placeholder": "Album"
+      }
+    },
+    "youtube": {
+      "type": "Link",
+      "config": {
+        "allowTargetBlank": true,
+        "label": "youtube",
+        "placeholder": "Link youtube",
+        "select": null
+      }
+    },
+    "spotify": {
+      "type": "Link",
+      "config": {
+        "allowTargetBlank": true,
+        "label": "spotify",
+        "placeholder": "Link Spotify",
+        "select": null
+      }
+    },
+    "lyrics": {
+      "type": "Text",
+      "config": {
+        "label": "lyrics",
+        "placeholder": "Testo"
+      }
+    },
+    "shopify": {
+      "type": "Link",
+      "config": {
+        "allowTargetBlank": true,
+        "label": "shopify",
+        "placeholder": "Link shopify",
+        "select": null
+      }
+    }
+  }
+}

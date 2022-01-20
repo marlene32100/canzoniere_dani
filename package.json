@@ -17,7 +17,9 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
+    "@prismicio/react": "^2.0.3",
     "gatsby": "^4.5.4",
+    "gatsby-plugin-config": "^1.0.7",
     "gatsby-plugin-image": "^2.5.2",
     "gatsby-plugin-manifest": "^4.5.2",
     "gatsby-plugin-mdx": "^3.5.2",
@@ -26,10 +28,14 @@
     "gatsby-plugin-sharp": "^4.5.2",
     "gatsby-plugin-sitemap": "^5.5.0",
     "gatsby-source-filesystem": "^4.5.2",
+    "gatsby-source-prismic": "^5.2.5",
     "gatsby-transformer-sharp": "^4.5.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "sass": "^1.49.0"
+  },
+  "devDependencies": {
+    "dotenv": "^14.2.0"
   }
 }
