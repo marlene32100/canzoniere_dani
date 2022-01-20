@@ -1,0 +1,44 @@
+{
+  "Main": {
+    "banner_title": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph, preformatted, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+        "allowTargetBlank": true,
+        "label": "banner_title"
+      }
+    },
+    "banner_background": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "banner_background"
+      }
+    },
+    "banner_description": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+        "allowTargetBlank": true,
+        "label": "banner_description",
+        "placeholder": "Descrizione"
+      }
+    },
+    "banner_link": {
+      "type": "Link",
+      "config": {
+        "allowTargetBlank": true,
+        "label": "banner_link"
+      }
+    },
+    "banner_link_label": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+        "allowTargetBlank": true,
+        "label": "banner_link_label"
+      }
+    }
+  }
+}
