@@ -2,8 +2,8 @@
 
 import * as React from "react";
 import { graphql } from "gatsby";
-
-import { HomepageBanner } from "../components/HomepageBanner";
+import "../app.scss";
+import { HomepageBanner } from "../components/homepage/HomepageBanner";
 
 const HomeTemplate = ({ data }) => {
   if (!data) return null;

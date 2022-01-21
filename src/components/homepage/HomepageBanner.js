@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { PrismicLink } from "@prismicio/react";
+import "./homepage.scss";
 
 export const HomepageBanner = ({
   title,
@@ -13,7 +14,7 @@ export const HomepageBanner = ({
   <section
     className="homepage-banner"
     style={{
-      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(${backgroundUrl})`,
+      backgroundImage: `linear-gradient(rgba(250, 250, 250, 0.8), rgba(250, 250, 250, 0.4)), url(${backgroundUrl})`,
     }}
   >
     <div className="banner-content container">

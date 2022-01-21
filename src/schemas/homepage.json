@@ -3,7 +3,7 @@
     "banner_title": {
       "type": "StructuredText",
       "config": {
-        "multi": "paragraph, preformatted, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+        "multi": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
         "allowTargetBlank": true,
         "label": "banner_title"
       }
@@ -19,7 +19,7 @@
     "banner_description": {
       "type": "StructuredText",
       "config": {
-        "multi": "preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+        "multi": "preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
         "allowTargetBlank": true,
         "label": "banner_description",
         "placeholder": "Descrizione"
@@ -29,15 +29,39 @@
       "type": "Link",
       "config": {
         "allowTargetBlank": true,
-        "label": "banner_link"
+        "label": "banner_link",
+        "select": null
       }
     },
     "banner_link_label": {
       "type": "StructuredText",
       "config": {
-        "multi": "preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+        "multi": "preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
         "allowTargetBlank": true,
         "label": "banner_link_label"
+      }
+    },
+    "last_cd": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "last_cd"
+      }
+    },
+    "buy_button_label": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
+        "label": "buy_button_label"
+      }
+    },
+    "buy_button_link": {
+      "type": "Link",
+      "config": {
+        "allowTargetBlank": true,
+        "label": "buy_button_link",
+        "select": null
       }
     }
   }

@@ -1,0 +1,27 @@
+@import "../../global.scss";
+
+.homepage-banner {
+  height: 10rem;
+  position: relative;
+}
+
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.banner-title {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+}
+
+.banner-description {
+  text-align: center;
+  color: white;
+}
