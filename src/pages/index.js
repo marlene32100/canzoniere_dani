@@ -2,26 +2,31 @@
 
 import * as React from "react";
 import { graphql } from "gatsby";
+
 import "../app.scss";
-import { HomepageBanner } from "../components/homepage/HomepageBanner";
+import Layout from "../components/layout/Layout.js";
+import Intro from "../components/homepage/Intro.js";
 
 const HomeTemplate = ({ data }) => {
   if (!data) return null;
   const doc = data.prismicHomepage.data;
 
   return (
-    <HomepageBanner
-      title={doc.banner_title.text}
-      description={doc.banner_description.text}
-      linkUrl={doc.banner_link.url}
-      linkLabel={doc.banner_link_label.text}
-      backgroundUrl={doc.banner_background.url}
-    />
+    <div>
+      <Layout
+        title={doc.banner_title.text}
+        description={doc.banner_description.text}
+        linkUrl="/song"
+        linkLabel={doc.banner_link_label.text}
+        home="/"
+      />
+      <Intro lastCdUrl={doc.last_cd.url} lastCdAlt={doc.last_cd.alt} />
+    </div>
   );
 };
 
 export const query = graphql`
-  query Homepage {
+  query HomeTemplate {
     prismicHomepage {
       data {
         banner_title {
@@ -38,8 +43,9 @@ export const query = graphql`
         banner_link_label {
           text
         }
-        banner_background {
+        last_cd {
           url
+          alt
         }
       }
     }

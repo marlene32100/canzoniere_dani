@@ -2,14 +2,24 @@
 
 import * as React from "react";
 import { graphql } from "gatsby";
+
+import Layout from "../components/layout/Layout.js";
 import "../app.scss";
 
 const Song = ({ data }) => {
   if (!data) return null;
   const doc = [data.allPrismicSong.edges];
+  const homeDoc = data.prismicHomepage.data;
 
   return (
     <div>
+      <Layout
+        title={homeDoc.banner_title.text}
+        description={homeDoc.banner_description.text}
+        linkUrl="/song"
+        linkLabel={homeDoc.banner_link_label.text}
+        home="/"
+      />
       <h1>Test</h1>
       <p>Those are the results: </p>
       <div>
@@ -30,6 +40,28 @@ const Song = ({ data }) => {
 
 export const query = graphql`
   query Song {
+    prismicHomepage {
+      data {
+        banner_title {
+          text
+        }
+        banner_description {
+          text
+        }
+        banner_link {
+          url
+          type
+          uid
+        }
+        banner_link_label {
+          text
+        }
+        last_cd {
+          url
+          alt
+        }
+      }
+    }
     allPrismicSong {
       edges {
         node {

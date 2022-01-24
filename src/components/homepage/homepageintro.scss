@@ -1,0 +1,70 @@
+@import "../../global.scss";
+
+main {
+  background-color: $geyser;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+.right {
+  height: 100vh;
+  position: relative;
+}
+
+.title-col {
+  font-size: 2.2rem;
+  color: $mine-shaft;
+  text-align: center;
+  margin: 3rem;
+}
+
+.left {
+  height: 100vh;
+}
+
+.picture-container {
+  height: fit-content;
+  width: fit-content;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cd-picture-image {
+  object-fit: contain;
+  height: 50vh;
+  border: 1px solid white;
+  margin: auto;
+}
+
+.buy-button {
+  padding: 1.6rem 3.2rem;
+  background-color: $retro;
+  color: $mine-shaft;
+  width: fit-content;
+  border: 1px solid white;
+  border-radius: 25px;
+  margin: 3rem auto;
+  &:hover {
+    background-color: white;
+    .buy-button-text {
+      text-decoration: none;
+      color: $geyser;
+    }
+  }
+}
+
+.buy-button-text {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: $mine-shaft;
+}
+
+.shopping-icon {
+  color: $mine-shaft;
+  font-size: 2rem;
+}
