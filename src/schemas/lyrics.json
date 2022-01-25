@@ -1,0 +1,79 @@
+{
+  "Main": {
+    "uid": {
+      "type": "UID",
+      "config": {
+        "label": "UID",
+        "placeholder": "Define uid here"
+      }
+    },
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Title",
+        "placeholder": "Enter title here"
+      }
+    },
+    "body": {
+      "type": "Slices",
+      "fieldset": "Slice zone",
+      "config": {
+        "labels": null,
+        "choices": {
+          "song": {
+            "type": "Slice",
+            "fieldset": "Song",
+            "description": "Testo della canzone",
+            "icon": "music_video",
+            "display": "grid",
+            "non-repeat": {
+              "song_title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1",
+                  "label": "Song Title",
+                  "placeholder": "Titolo della canzone"
+                }
+              },
+              "titolo_album": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading2",
+                  "label": "Titolo album",
+                  "placeholder": "Titolo dell'album"
+                }
+              },
+              "lyrics": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "paragraph",
+                  "allowTargetBlank": true,
+                  "label": "Lyrics",
+                  "placeholder": "Testo della canzone"
+                }
+              }
+            },
+            "repeat": {
+              "button_label": {
+                "type": "Text",
+                "config": {
+                  "label": "Button label",
+                  "placeholder": "Etichetta link"
+                }
+              },
+              "button_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Button link",
+                  "placeholder": "Link url",
+                  "select": null
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

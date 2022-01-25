@@ -48,6 +48,7 @@ module.exports = {
           homepage: require("./src/schemas/homepage.json"),
           song: require("./src/schemas/song.json"),
           album: require("./src/schemas/album.json"),
+          lyrics: require("./src/schemas/lyrics.json"),
         },
       },
     },
