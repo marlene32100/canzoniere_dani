@@ -1,39 +1,25 @@
-// index.js file
+// {PrismicPage.url}.js file
 
 import * as React from "react";
 import { graphql } from "gatsby";
-import { Link } from "gatsby";
+import { SliceZone } from "@prismicio/react";
 
-import Layout from "../components/layout/Layout";
+import { Layout } from "../components/layout/Layout";
 
-const Lyrics = ({ data }) => {
+const LyricsTemplate = ({ data }) => {
+  if (!data) return null;
   const doc = data.allPrismicLyrics.edges.slice(0, 1).pop();
-  if (!doc) return null;
-  const title = doc.node.data.title;
-  const slices = [doc.node.data.body];
 
   return (
     <div>
       <Layout />
-      <h1>{title.text}</h1>
-      <p>Ciao </p>
-      <ul>
-        {slices.map((song) =>
-          song.map((item) => (
-            <li>
-              <Link to={`/lyrics/${item.primary.song_title.text}`}>
-                {item.primary.song_title.text}
-              </Link>
-            </li>
-          ))
-        )}
-      </ul>
+      <SliceZone slices={doc.body} />
     </div>
   );
 };
 
 export const query = graphql`
-  query Lyrics {
+  query LyricsTemplate {
     allPrismicLyrics {
       edges {
         node {
@@ -71,4 +57,5 @@ export const query = graphql`
     }
   }
 `;
-export default Lyrics;
+
+export default LyricsTemplate;

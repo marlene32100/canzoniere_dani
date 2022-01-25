@@ -1,6 +1,8 @@
 // layout.js file
 
 import * as React from "react";
+import PropTypes from "prop-types";
+import { useStaticQuery, graphql } from "gatsby";
 
 import { PrismicLink } from "@prismicio/react";
 
@@ -12,18 +14,43 @@ import "../../app.scss";
 import "./header.scss";
 import "./footer.scss";
 
-const Layout = ({ title, description, linkUrl, linkLabel, home }) => {
+const Layout = ({ children }) => {
+  const data = useStaticQuery(graphql`
+    query Layout {
+      prismicHomepage {
+        data {
+          banner_title {
+            text
+          }
+          banner_description {
+            text
+          }
+          banner_link {
+            url
+            type
+            uid
+          }
+          banner_link_label {
+            text
+          }
+        }
+      }
+    }
+  `);
+  if (!data) return null;
+  const doc = data.prismicHomepage.data;
+
   return (
     <div>
       <header className="homepage-banner navbar">
         <div className="banner-content container">
-          <h2 className="banner-title">{title}</h2>
-          <p className="banner-description">{description}</p>
+          <h2 className="banner-title">{doc.banner_title.text}</h2>
+          <p className="banner-description">{doc.banner_description.text}</p>
           <div className="link-area">
-            <PrismicLink href={linkUrl} className="banner-button">
-              {linkLabel}
+            <PrismicLink href="/lyrics" className="banner-button">
+              {doc.banner_link_label.text}
             </PrismicLink>
-            <PrismicLink href={home} className="banner-button">
+            <PrismicLink href="/" className="banner-button">
               Home
             </PrismicLink>
           </div>
