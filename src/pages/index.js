@@ -14,7 +14,14 @@ const HomeTemplate = ({ data }) => {
   return (
     <div>
       <Layout />
-      <Intro lastCdUrl={doc.last_cd.url} lastCdAlt={doc.last_cd.alt} />
+      <Intro
+        lastCdUrl={doc.last_cd.url}
+        lastCdAlt={doc.last_cd.alt}
+        smallCdUrl={doc.image_small.url}
+        smallCdAlt={doc.image_small.alt}
+        mediumCdUrl={doc.image_medium.url}
+        mediumCdAlt={doc.image_medium.alt}
+      />
     </div>
   );
 };
@@ -24,6 +31,14 @@ export const query = graphql`
     prismicHomepage {
       data {
         last_cd {
+          url
+          alt
+        }
+        image_small {
+          url
+          alt
+        }
+        image_medium {
           url
           alt
         }

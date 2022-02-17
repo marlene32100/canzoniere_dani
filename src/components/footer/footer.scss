@@ -3,6 +3,8 @@
 .footer {
   background-color: $mine-shaft;
   z-index: 9999;
+  position: fixed;
+  bottom: 0;
 }
 
 .footer-icons {

@@ -1,12 +1,16 @@
 @import "../../global.scss";
+@import "../../mixins.scss";
 
 main {
   background-color: $geyser;
 }
 
-.container {
-  height: 100%;
-  width: 100%;
+.row-container {
+  border-right: 2px solid $mine-shaft;
+  border-left: 2px solid $mine-shaft;
+  @include media("<phone") {
+    flex-direction: column;
+  }
 }
 
 .right {
@@ -23,6 +27,12 @@ main {
 
 .left {
   height: 100vh;
+  @include media("<phone") {
+    border-top: 2px solid $mine-shaft;
+  }
+  @include media(">phone") {
+    border-left: 2px solid $mine-shaft;
+  }
 }
 
 .picture-container {
@@ -35,19 +45,25 @@ main {
 
 .cd-picture-image {
   object-fit: contain;
-  height: 50vh;
-  border: 1px solid white;
+  width: 100%;
   margin: auto;
 }
 
+.buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
 .buy-button {
-  padding: 1.6rem 3.2rem;
   background-color: $retro;
   color: $mine-shaft;
-  width: fit-content;
-  border: 1px solid white;
-  border-radius: 25px;
-  margin: 3rem auto;
+  width: 100%;
+  border: 2px solid $mine-shaft;
+  margin: auto;
+  height: 8rem;
+  text-align: center;
   &:hover {
     background-color: $dark-retro;
     .buy-button-text {
@@ -59,7 +75,7 @@ main {
 
 .buy-button-text {
   font-family: "Roboto", sans-serif;
-  font-size: 1.6rem;
+  font-size: 3rem;
   text-decoration: none;
   color: $mine-shaft;
 }
@@ -67,4 +83,10 @@ main {
 .shopping-icon {
   color: $mine-shaft;
   font-size: 2rem;
+}
+
+.left-column-intro-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 3rem;
+  color: $mine-shaft;
 }

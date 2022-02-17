@@ -41,6 +41,22 @@
         "label": "banner_link_label"
       }
     },
+    "image_small": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Image Small"
+      }
+    },
+    "image_medium": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Image Medium"
+      }
+    },
     "last_cd": {
       "type": "Image",
       "config": {
