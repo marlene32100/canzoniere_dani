@@ -2,4 +2,15 @@
 
 .footer {
   background-color: $mine-shaft;
+  z-index: 9999;
+}
+
+.footer-icons {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-icons-icon {
+  border: 1px solid $geyser;
+  border-radius: 50%;
 }

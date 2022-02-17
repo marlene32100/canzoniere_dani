@@ -49,7 +49,7 @@ main {
   border-radius: 25px;
   margin: 3rem auto;
   &:hover {
-    background-color: white;
+    background-color: $dark-retro;
     .buy-button-text {
       text-decoration: none;
       color: $geyser;
@@ -58,7 +58,7 @@ main {
 }
 
 .buy-button-text {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
   text-decoration: none;
   color: $mine-shaft;

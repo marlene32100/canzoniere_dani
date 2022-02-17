@@ -9,6 +9,7 @@ import { PrismicLink } from "@prismicio/react";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import LanguageRoundedIcon from "@mui/icons-material/LanguageRounded";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import HomeIcon from "@mui/icons-material/Home";
 
 import "../../app.scss";
 import "./header.scss";
@@ -43,15 +44,24 @@ const Layout = ({ children }) => {
   return (
     <div>
       <header className="homepage-banner navbar">
-        <div className="banner-content container">
-          <h2 className="banner-title">{doc.banner_title.text}</h2>
-          <p className="banner-description">{doc.banner_description.text}</p>
+        <div className="banner-content">
+          <div className="banner-content-title">
+            <h2 className="banner-title">{doc.banner_title.text}</h2>
+          </div>
+
           <div className="link-area">
-            <PrismicLink href="/lyrics" className="banner-button">
-              {doc.banner_link_label.text}
+            <PrismicLink
+              href="/lyrics"
+              className="banner-button banner-button-first"
+            >
+              <div className="banner-button-link">
+                {doc.banner_link_label.text}
+              </div>
             </PrismicLink>
             <PrismicLink href="/" className="banner-button">
-              Home
+              <div className="banner-button-link">
+                <HomeIcon className="banner-button-link-icon" />
+              </div>
             </PrismicLink>
           </div>
         </div>
@@ -61,25 +71,31 @@ const Layout = ({ children }) => {
         className=" footer text-center text-white"
         style={{ position: `fixed`, bottom: 0, left: 0, width: `100%` }}
       >
-        <section className="mb-4">
+        <section className="footer-icons">
           <a
-            className="btn btn-outline-light btn-floating m-1"
-            href="#!"
+            className="btn btn-outline-light btn-floating m-1 footer-icons-icon"
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
             role="button"
           >
             <FacebookRoundedIcon />
           </a>
 
           <a
-            className="btn btn-outline-light btn-floating m-1"
-            href="#!"
+            className="btn btn-outline-light btn-floating m-1 footer-icons-icon"
+            href="https://github.com"
+            target="_blank"
+            rel="noopener noreferrer"
             role="button"
           >
             <LanguageRoundedIcon />
           </a>
           <a
-            className="btn btn-outline-light btn-floating m-1"
-            href="#!"
+            className="btn btn-outline-light btn-floating m-1 footer-icons-icon"
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
             role="button"
           >
             <InstagramIcon />

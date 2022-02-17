@@ -1,50 +1,120 @@
 @import "../../global.scss";
+@import "../../mixins.scss";
 
 header {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 9999;
-  background-color: $mine-shaft;
+  background-color: $geyser;
+  border-bottom: 2px solid $mine-shaft;
+  @include media("<phone") {
+    border: none;
+  }
 }
 
 .homepage-banner {
-  height: 6rem;
+  height: 8rem;
   position: relative;
+  @include media("<phone") {
+    height: 16rem;
+  }
 }
-
 .banner-content {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  @include media(">phone") {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+  }
+}
+
+.banner-content-title {
+  @include media("<phone") {
+    height: 8rem;
+    position: relative;
+  }
+  @include media(">phone") {
+    position: relative;
+    height: 8rem;
+    width: 100%;
+  }
 }
 
 .banner-title {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
+  color: $mine-shaft;
+  @include media("<phone") {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @include media(">phone") {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+  }
 }
 
 .banner-description {
   text-align: center;
 }
 
+.link-area {
+  border: 2px solid $mine-shaft;
+  height: 8rem;
+  width: fit-content;
+  display: flex;
+  @include media("<phone") {
+    width: 100vw;
+    border: 2px solid $mine-shaft;
+  }
+}
+
 .banner-button {
-  padding: 0.8rem 1.6rem;
-  border: 1px solid $geyser;
-  border-radius: 25px;
-  margin-right: 1rem;
+  flex: 50%;
+  height: 100%;
+  position: relative;
+  @include media(">phone") {
+    width: 16rem;
+  }
+}
+
+.banner-button-link {
   color: $mine-shaft;
   font-size: 1.6rem;
   text-decoration: none;
-  background-color: $retro;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   &:hover {
-    background-color: white;
+    background-color: $dark-retro;
     text-decoration: none;
     color: $geyser;
   }
+}
+
+.banner-button-first {
+  border-right: 2px solid $mine-shaft;
+}
+
+.banner-button-link svg {
+  fill: $mine-shaft;
+  font-size: 4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

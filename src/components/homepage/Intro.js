@@ -17,7 +17,7 @@ export const Intro = ({ lastCdUrl, lastCdAlt }) => {
         <section>
           <Row>
             <Col sm={12} md={6} className="right">
-              <h2 className="title-col">Acquista l'ultimo CD</h2>
+              <h2 className="title-col">Non perdere l'ultimo CD</h2>
               <div className="picture-container">
                 <picture className="cd-picture">
                   <img
