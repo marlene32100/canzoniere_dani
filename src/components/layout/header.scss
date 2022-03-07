@@ -88,6 +88,11 @@ header {
   @include media(">phone") {
     width: 16rem;
   }
+  &:hover {
+    background-color: $dark-retro;
+    text-decoration: none;
+    color: $geyser;
+  }
 }
 
 .banner-button-link {
@@ -99,11 +104,6 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  &:hover {
-    background-color: $dark-retro;
-    text-decoration: none;
-    color: $geyser;
-  }
 }
 
 .banner-button-first {

@@ -41,7 +41,9 @@ const Layout = ({ children }) => {
       <header className="homepage-banner navbar">
         <div className="banner-content">
           <div className="banner-content-title">
-            <h2 className="banner-title">{doc.banner_title.text}</h2>
+            <PrismicLink href="/" className="back-home">
+              <h2 className="banner-title">{doc.banner_title.text}</h2>
+            </PrismicLink>
           </div>
 
           <div className="link-area">

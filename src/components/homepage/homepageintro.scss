@@ -29,6 +29,7 @@ main {
   height: 100vh;
   @include media("<phone") {
     border-top: 2px solid $mine-shaft;
+    margin-top: 3rem;
   }
   @include media(">phone") {
     border-left: 2px solid $mine-shaft;
@@ -43,10 +44,30 @@ main {
   transform: translateX(-50%);
 }
 
+.let-picture-container {
+  height: fit-content;
+  width: fit-content;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .cd-picture-image {
   object-fit: contain;
   width: 100%;
   margin: auto;
+  @include media(">phone") {
+    padding: 3rem;
+  }
+}
+
+.left-picture-image {
+  object-fit: cover;
+  width: 100%;
+  margin: auto;
+  @include media(">phone") {
+    padding: 3rem;
+  }
 }
 
 .buy {

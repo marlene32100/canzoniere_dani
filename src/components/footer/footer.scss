@@ -1,18 +1,20 @@
 @import "../../global.scss";
 
-.footer {
+.footer-down {
   background-color: $mine-shaft;
-  z-index: 9999;
-  position: fixed;
-  bottom: 0;
+  position: relative !important;
+  margin-bottom: 0;
 }
 
 .footer-icons {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .footer-icons-icon {
   border: 1px solid $geyser;
   border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  vertical-align: middle;
 }

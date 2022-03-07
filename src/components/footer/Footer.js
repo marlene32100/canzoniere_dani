@@ -10,7 +10,7 @@ import "./footer.scss";
 export const Footer = () => {
   return (
     <footer
-      className=" footer text-center text-white"
+      className="footer-down text-center text-white"
       style={{ position: `fixed`, bottom: 0, left: 0, width: `100%` }}
     >
       <section className="footer-icons">
@@ -48,9 +48,10 @@ export const Footer = () => {
         className="text-center p-3"
         style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
       >
-        Made with &#10084;&#65039; by
+        Made with &#10084;&#65039; by <br />
         <a className="text-white" href="https://blueblissstudio.com/">
-          Blue Bliss
+          Katia De Bon - Blue Bliss <br />
+          2022 - &#169; all rigths reserved
         </a>
       </div>
     </footer>
