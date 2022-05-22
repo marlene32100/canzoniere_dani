@@ -19,9 +19,9 @@ const Lyrics = ({ data }) => {
     <div>
       <Layout />
       <main>
-        <h1>{title.text}</h1>
+        <h1 className="lyrics-page-title">{title.text}</h1>
         <div className="lyrics-list">
-          <ul>
+          <ol>
             {slices.map((song) =>
               song.map((item) => (
                 <li className="lyrics-list-song">
@@ -34,7 +34,7 @@ const Lyrics = ({ data }) => {
                 </li>
               ))
             )}
-          </ul>
+          </ol>
         </div>
       </main>
       <Footer />

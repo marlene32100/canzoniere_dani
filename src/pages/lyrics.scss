@@ -1,22 +1,37 @@
 @import "../global.scss";
 @import "../mixins.scss";
 
-ul {
+ol {
   padding-left: 0;
+}
+
+.lyrics-page-title {
+  font-size: 2.5rem;
+  color: $mine-shaft;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+  text-align: center;
+  @include media("<phone") {
+    padding-top: 6rem;
+    display: table;
+    margin: 0 auto;
+    vertical-align: middle;
+    text-align: center;
+  }
 }
 
 .lyrics-list {
   text-align: center;
-  padding-top: 6rem;
   padding-bottom: 6rem;
 }
 
 .lyrics-list-song {
-  border-bottom: 2px solid black;
+  border: 2px solid black;
   max-width: 600px;
   margin-top: 3rem;
   margin-left: auto;
   margin-right: auto;
+  padding: 3rem 1rem;
 }
 
 .lyrics-list-song-title {
@@ -26,7 +41,7 @@ ul {
   text-transform: uppercase;
   padding: 3rem auto;
   @include media("<phone") {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 }
 
