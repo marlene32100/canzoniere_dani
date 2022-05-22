@@ -3,53 +3,118 @@
 
 main {
   background-color: $geyser;
-}
-
-.row-container {
-  border-right: 2px solid $mine-shaft;
-  border-left: 2px solid $mine-shaft;
-  @include media("<phone") {
-    flex-direction: column;
-  }
-}
-
-.right {
-  height: 100vh;
-  position: relative;
+  height: fit-content;
+  flex-grow: 1;
 }
 
 .title-col {
-  font-size: 2.2rem;
+  font-size: 5rem;
   color: $mine-shaft;
-  text-align: center;
-  margin: 3rem;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+  font-style: italic;
+  @include media("<phone") {
+    font-size: 4rem;
+    padding-top: 6rem;
+    display: table;
+    margin: 0 auto;
+    vertical-align: middle;
+    text-align: center;
+  }
 }
 
-.left {
-  height: 100vh;
+.title-col span {
+  font-size: 1.8rem;
+  color: $mine-shaft;
+  display: table;
+  margin: 0 auto;
+  font-style: normal;
+}
+
+.row-container {
+  height: fit-content;
   @include media("<phone") {
-    border-top: 2px solid $mine-shaft;
-    margin-top: 3rem;
   }
-  @include media(">phone") {
-    border-left: 2px solid $mine-shaft;
+}
+
+.column-intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  padding-bottom: 3rem;
+  @include media("<phone") {
+  }
+}
+
+.second-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100rem;
+  position: relative;
+  @include media("<phone") {
+    height: 100rem;
+  }
+}
+
+.right,
+.left {
+  cursor: pointer;
+  position: relative;
+  @include media("<phone") {
+    height: 100vh;
+  }
+}
+
+.link {
+  text-decoration: none;
+}
+
+.link-to-lyrics {
+  background-color: $retro;
+  color: $mine-shaft;
+  width: 100%;
+  border: 2px solid $mine-shaft;
+  margin: auto;
+  height: 8rem;
+  text-align: center;
+  position: relative;
+  &:hover {
+    background-color: $dark-retro;
+    .buy-button-text {
+      text-decoration: none;
+      color: $geyser;
+    }
+  }
+}
+
+.link-to-lyrics-text {
+  font-size: 2rem;
+  color: $mine-shaft;
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+}
+
+.right {
+  @include media("<phone") {
+    height: fit-content;
   }
 }
 
 .picture-container {
   height: fit-content;
   width: fit-content;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.let-picture-container {
-  height: fit-content;
-  width: fit-content;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
+  @include media(">phone") {
+    max-width: 400px;
+  }
 }
 
 .cd-picture-image {
@@ -67,6 +132,7 @@ main {
   margin: auto;
   @include media(">phone") {
     padding: 3rem;
+    max-width: 400px;
   }
 }
 
@@ -103,7 +169,11 @@ main {
 
 .shopping-icon {
   color: $mine-shaft;
-  font-size: 2rem;
+  font-size: 3rem;
+}
+
+.lyrics-icon {
+  font-size: 3rem;
 }
 
 .left-column-intro-text {

@@ -11,7 +11,7 @@ export const Footer = () => {
   return (
     <footer
       className="footer-down text-center text-white"
-      style={{ position: `fixed`, bottom: 0, left: 0, width: `100%` }}
+      style={{ width: `100%` }}
     >
       <section className="footer-icons">
         <a

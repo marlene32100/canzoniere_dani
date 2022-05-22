@@ -69,5 +69,11 @@ module.exports = {
         accessToken: process.env.PRISMIC_ACCESS_TOKEN,
       },
     },
+    {
+      resolve: `gatsby-plugin-page-creator`,
+      options: {
+        path: `${__dirname}/src/pages`,
+      },
+    },
   ],
 };

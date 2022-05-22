@@ -6,6 +6,7 @@ import { graphql } from "gatsby";
 import "../app.scss";
 import Layout from "../components/layout/Layout.js";
 import Intro from "../components/homepage/Intro.js";
+import Footer from "../components/footer/Footer.js";
 
 const HomeTemplate = ({ data }) => {
   if (!data) return null;
@@ -22,6 +23,7 @@ const HomeTemplate = ({ data }) => {
         mediumCdUrl={doc.image_medium.url}
         mediumCdAlt={doc.image_medium.alt}
       />
+      <Footer />
     </div>
   );
 };

@@ -1,0 +1,40 @@
+@import "../global.scss";
+@import "../mixins.scss";
+
+ul {
+  padding-left: 0;
+}
+
+.lyrics-list {
+  text-align: center;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.lyrics-list-song {
+  border-bottom: 2px solid black;
+  max-width: 600px;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lyrics-list-song-title {
+  font-size: 5rem;
+  text-decoration: none;
+  color: $retro;
+  text-transform: uppercase;
+  padding: 3rem auto;
+  @include media("<phone") {
+    font-size: 4rem;
+  }
+}
+
+.lyrics-list-song-text {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: $mine-shaft;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}

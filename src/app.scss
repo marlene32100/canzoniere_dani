@@ -13,6 +13,16 @@ body {
   color: $mine-shaft;
   min-height: 100vh;
   position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main {
+  flex-grow: 1;
 }
 p {
   font-family: "Cardo", serif;

@@ -5,7 +5,7 @@ exports.linkResolver = (doc) => {
   }
 
   if (doc.type === "lyrics") {
-    return `/lyrics/${doc.uid}`;
+    return `lyrics/${doc.uid}`;
   }
 
   // Backup for all other types

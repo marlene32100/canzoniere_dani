@@ -5,6 +5,9 @@ import { graphql } from "gatsby";
 import { Link } from "gatsby";
 
 import Layout from "../components/layout/Layout";
+import Footer from "../components/footer/Footer";
+
+import "./lyrics.scss";
 
 const Lyrics = ({ data }) => {
   const doc = data.allPrismicLyrics.edges.slice(0, 1).pop();
@@ -15,19 +18,26 @@ const Lyrics = ({ data }) => {
   return (
     <div>
       <Layout />
-      <h1>{title.text}</h1>
-      <p>Ciao </p>
-      <ul>
-        {slices.map((song) =>
-          song.map((item) => (
-            <li>
-              <Link to={`/lyrics/${item.primary.song_title.text}`}>
-                {item.primary.song_title.text}
-              </Link>
-            </li>
-          ))
-        )}
-      </ul>
+      <main>
+        <h1>{title.text}</h1>
+        <div className="lyrics-list">
+          <ul>
+            {slices.map((song) =>
+              song.map((item) => (
+                <li className="lyrics-list-song">
+                  <p className="lyrics-list-song-title">
+                    {item.primary.song_title.text}
+                  </p>
+                  <p className="lyrics-list-song-text">
+                    {item.primary.lyrics.text}
+                  </p>
+                </li>
+              ))
+            )}
+          </ul>
+        </div>
+      </main>
+      <Footer />
     </div>
   );
 };
